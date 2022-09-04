@@ -1,3 +1,4 @@
+
 import os
 from os import getenv
 from dotenv import load_dotenv
@@ -8,10 +9,10 @@ if os.path.exists("local.env"):
 load_dotenv()
 admins = {}
 SESSION_NAME = getenv("SESSION_NAME", "session")
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 BOT_NAME = getenv("BOT_NAME", "")
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "")
 OWNER_NAME = getenv("OWNER_NAME", "")
 ALIVE_NAME = getenv("ALIVE_NAME", "")
 BOT_USERNAME = getenv("BOT_USERNAME", "")
